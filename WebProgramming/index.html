@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<!-- 
+    최종 수정일 : 2018.5.7
+    기본적인 레이아웃 완성
+    상단 메뉴 드롭다운 목록 만들기
+    반응형 웹으로 바꿔야할 필요성이 있음(창 크기가 줄었을 때 화면이 깨지지 않도록)
+-->
 <html>
     <head>
         <title> WebProgramming Study </title>
@@ -6,11 +12,43 @@
         <link rel=stylesheet href="style.css" type="text/css">
     </head>
 
-        <frameset rows="10%, 90%">
-            <frame src="title.html" noresize scrolling="NO">
-            <frameset cols="20%, 80%">
-                <frame src="menu.html" noresize>
-                <frame src="main.html" noresize>
-            </frameset>
-        </frameset>
+    <!-- 제목 영역 -->
+    <body>
+        <div id="title">
+            <span style="vertical-align: 50%;">WebProgramming</span>
+        </div>
+
+        <!-- 상단 메뉴바 -->
+        <nav id="menuBar">
+            <ul>
+                <li><a class="menuButton" href="#">≡</a></li>
+                <li><a class="menuButton" 
+                    href="https://bbtfly98.github.io/WebProgramming/index.html"
+                    target=_self>홈</a></li>
+                <li><a class="menuButton" href="#">참고 사이트</a></li>
+            </ul>
+        </nav>
+
+        <!-- 좌측 하단 메뉴 -->
+        <nav id="menu">
+            <ul>
+                <li><a class="sideMenu" href="html_content.html" target="content">HTML</a></li>
+                <li><a class="sideMenu" href="css_content.html" target="content">CSS</a></li>
+                <li><a class="sideMenu" href="javascript_content.html" target="content">Javascript</a></li>
+                <li><a class="sideMenu" href="jquery_content.html" target="content">JQuery</a></li>
+            </ul>
+        </nav>
+
+        <!-- 우측 하단 본문 -->
+        <iframe name="content" id="content" width=80% height=200px src="iframe.html"
+                scrolling=auto frameborder=0>
+            iframe을 지원하지 않습니다.
+        </iframe>
+
+        <!-- 최하단 -->
+        <div id="footer">
+            <img width=147px height=42px src="communication_mark_kwu.png" alt="광운대학교">
+            광운대학교 소프트웨어학부<br>웹프로그래밍
+        </div>
+    </body>
 </html>

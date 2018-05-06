@@ -1,0 +1,115 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #F2F2F2;
+}
+
+/* 제목 영역 */
+#title{
+    height: 100px;
+    font-weight: bold;
+    font-family: "고딕";
+    font-size: 50pt;
+    text-align: center;
+    background-color: #BDBDBD;
+}
+
+/* 상단 메뉴 바 */
+#menuBar{
+    background-color: #424242;
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    width: 100%;
+}
+
+#menuBar ul{
+    padding-left: 0;
+    margin: 0;
+}
+
+#menuBar ul li{
+    list-style-type: none;
+    float: left;
+    line-height: 50px;
+    text-align: center;
+    border-left:1px solid white;
+}
+
+#menuBar ul li:first-child{
+    border-left: none;
+}
+
+#menuBar .menuButton{
+    text-decoration: none;
+    color: white;
+    font-size:20pt;
+    font-family: "굴림";
+    font-weight: bold;
+    display: block;
+    width:200px;
+}
+
+#menuBar .menuButton:hover{
+    color:black;
+    background-color: #A4A4A4;
+}
+
+/* 좌측 하단 메뉴 */
+#menu{
+    background-color: #848484;
+    float: left;
+    width: 20%;
+    height: 500px;
+}
+
+#menu ul{
+    padding-left: 0;
+    margin:0;
+}
+
+#menu ul li{
+    list-style-type: none;
+    text-align: center;
+    line-height: 30px;
+    border-top: 1px solid black;
+}
+
+#menu ul li:first-child{
+    border-top: none;
+}
+
+#menu .sideMenu{
+    text-decoration: none;
+    font-size: 20pt;
+    color: black;
+    display: block;
+}
+
+#menu .sideMenu:hover{
+    color: white;
+    background-color: #6E6E6E;
+}
+
+/* 우측 하단 본문 */
+#content{
+    background-color: white;
+    float: left;
+    width: 80%;
+    height: 500px;
+}
+
+/* 최하단 */
+#footer{
+    background-color: #E6E6E6;
+    text-align: center;
+}
+
+#footer img{
+    float: left;
+}
+
+#footer span{
+    float: left;
+    text-align: center;
+}
