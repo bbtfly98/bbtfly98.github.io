@@ -2,9 +2,51 @@
 <html>
     <head>
         <title>html content</title>
+
+        <style type="text/css">
+            body{
+                background-color: #FAFAFA;
+                font-family: "나눔바른펜", "굴림체"
+            }
+
+            body h1{
+                text-align:center;
+                font-weight: bold;
+            }
+
+            .title_line{
+                width: 250px;
+            }
+
+            .end_line{
+                border-style: dashed;
+            }
+        </style>
     </head>
 
     <body>
-        html의 기본 구조
+        <h1>html의 기본 구조</h1><hr class="title_line">
+        <xmp style="font-family: '나눔바른펜', '굴림'">
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <title> 문서의 제목 </title>
+            </head>
+
+            <body>
+                문서의 내용
+            </body>
+        </html>
+        </xmp><br>
+        html문서의 기본 구조는 위와 같다.<br>
+        html문서의 태그는 기본적으로 여는 태그(&lt;&gt;)와 닫는 태그(&lt;/&gt;)로 구성된다.<br>
+        html문서는 &lt;html&gt; 태그의 범위 안에서 작성된다. &lt;head&gt;태그는 html문서의 헤더 영역을
+        표시하는 태그로 title, meta, style, script 태그 등이 이 안에서 작성된다. &lt;body&gt;태그는 
+        html문서의 본문 영역을 표시하는 태그로 html문서의 대부분의 내용이 이 안에 작성된다.<br>
+        <hr class="end_line">
+
+        <h1>여러가지 특수문자</h1><hr class="title_line">
+        html문서 내에서 특수문자는 문자 코드를 사용하여 표현한다.<br>
+        문자코드는 &amp;code; 의 형식을 갖는다.<br>
     </body>
 </html>

@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <!-- 
-    최종 수정일 : 2018.5.7
-    기본적인 레이아웃 완성
-    상단 메뉴 드롭다운 목록 만들기
-    반응형 웹으로 바꿔야할 필요성이 있음(창 크기가 줄었을 때 화면이 깨지지 않도록)
-    css가 적용이 안되는 현상 발견
+    최종 수정일 : 2018.5.8
+    드롭다운 메뉴는 자바스크립트 이후에 하기로 변경
+    대신 참고 사이트를 눌렀을때 iframe에 사이트 목록을 표시하기로.
 -->
 <html>
     <head>
@@ -26,7 +24,8 @@
                 <li><a class="menuButton" 
                     href="https://bbtfly98.github.io/WebProgramming/index.html"
                     target=_self>홈</a></li>
-                <li><a class="menuButton" href="#">참고 사이트</a></li>
+                <li><a class="menuButton" href="referencesite.html"
+                    target="content">참고 사이트</a></li>
             </ul>
         </nav>
 
