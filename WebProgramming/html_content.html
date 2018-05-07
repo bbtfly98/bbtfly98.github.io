@@ -3,29 +3,31 @@
     <head>
         <title>html content</title>
 
-        <style type="text/css">
-            body{
-                background-color: #FAFAFA;
-                font-family: "나눔바른펜", "굴림체"
-            }
-
-            body h1{
-                text-align:center;
-                font-weight: bold;
-            }
-
-            .title_line{
-                width: 250px;
-            }
-
-            .end_line{
-                border-style: dashed;
-            }
-        </style>
+        <link rel=stylesheet href="content.css" type="text/css">
     </head>
 
     <body>
+        <h1>html 문서 작성 규칙</h1><hr class="title_line">
+        html문서는 태그를 이용해서 작성된다.<br>
+        html의 태그는 크게 복합태그와 단독태그로 분류된다.
+        <ul>
+            <li>복합태그 : &lt;시작태그&gt; 내용 &lt;/종료태그&gt;</li>
+            <ul>
+                <li>태그에 내용을 적용한다.</li>
+            </ul>
+
+            <li>단독 태그 : &lt;태그&gt;</li>
+            <ul>
+                <li>태그가 입력된 곳에서 태그 명령이 적용된다.</li>
+            </ul>
+        </ul>
+        태그안에 별도로 속성을 지정하는 방법도 있다.<br>
+        <p>&lt;태그 속성=&quot;값&quot;&gt; 내용 &lt;/태그&gt;</p>
+        이 때 태그와 속성, 속성과 속성 사이는 한 칸씩 띄워주어야 한다. 속성값이 숫자이거나 
+        한 단어일 경우는 큰 따옴표를 생략 가능하다.
+        <hr class="end_line">
         <h1>html의 기본 구조</h1><hr class="title_line">
+
         <xmp style="font-family: '나눔바른펜', '굴림'">
         <!DOCTYPE html>
         <html>
@@ -37,9 +39,9 @@
                 문서의 내용
             </body>
         </html>
-        </xmp><br>
+        </xmp>
+
         html문서의 기본 구조는 위와 같다.<br>
-        html문서의 태그는 기본적으로 여는 태그(&lt;&gt;)와 닫는 태그(&lt;/&gt;)로 구성된다.<br>
         html문서는 &lt;html&gt; 태그의 범위 안에서 작성된다. &lt;head&gt;태그는 html문서의 헤더 영역을
         표시하는 태그로 title, meta, style, script 태그 등이 이 안에서 작성된다. &lt;body&gt;태그는 
         html문서의 본문 영역을 표시하는 태그로 html문서의 대부분의 내용이 이 안에 작성된다.<br>
@@ -48,5 +50,50 @@
         <h1>여러가지 특수문자</h1><hr class="title_line">
         html문서 내에서 특수문자는 문자 코드를 사용하여 표현한다.<br>
         문자코드는 &amp;code; 의 형식을 갖는다.<br>
+
+        <table>
+            <tr>
+                <td>문자 코드</td>
+                <td>결과</td>
+                <td>설명</td>
+            </tr>
+
+            <tr>
+                <td>&amp;nbsp;</td>
+                <td>&nbsp;</td>
+                <td>하나의 공백 문자</td>
+            </tr>
+                
+            <tr>
+                <td>&amp;lt;</td>
+                <td>&lt;</td>
+                <td>'&lt;' 표시</td>
+            </tr>
+                
+            <tr>
+                <td>&amp;gt;</td>
+                <td>&gt;</td>
+                <td>'&gt;' 표시</td>
+            </tr>
+
+            <tr>
+                <td>&amp;amp;</td>
+                <td>&amp;</td>
+                <td>'&amp;' 표시</td>
+            </tr>
+
+            <tr>
+                <td>&amp;quot;</td>
+                <td>&quot;</td>
+                <td>큰 따옴표(&quot;) 표시</td>
+            </tr>
+        </table>
+        <hr class="end_line">
+
+        <h1>문단 관련 태그</h1><hr class="title_line">
+        <p>&lt;br&gt; 태그 : 줄 바꿈 태그로 단독 태그이다.</p>
+        <p>&lt;p&gt; 태그 : 단락 구분 및 정렬(&lt;br&gt;태그를 두 번 사용한 것과 같다)<br></p>
+        <p>&lt;h1&gt; ... &lt;h6&gt; 태그 : 제목 정렬</p>
+        <hr class="end_line">
     </body>
 </html>

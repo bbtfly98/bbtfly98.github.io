@@ -1,0 +1,27 @@
+body{
+    background-color: #FAFAFA;
+    font-family: "나눔바른펜", "굴림체"
+}
+
+body h1{
+    text-align:center;
+    font-weight: bold;
+}
+
+/* hr */
+.title_line{
+    width: 250px;
+}
+
+.end_line{
+    border-style: dashed;
+}
+
+/* table */
+table{
+    text-align: center;
+}
+
+table tr td{
+    border: 1px solid;
+}

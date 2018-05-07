@@ -2,9 +2,110 @@
 <html>
     <head>
         <title>css content</title>
+
+        <link rel=stylesheet href="content.css" type="text/css">
     </head>
 
     <body>
-        css 사용법
+        <h1>css 삽입법</h1><hr class="title_line">
+
+        <ul>
+            <li>태그 내부 삽입형</li>
+            <p>&lt;태그 style=&quot;속성:값; 속성:값;&quot;&gt;</p>
+            <ul>
+                <li>태그의 스타일 속성으로 해당 태그에만 스타일을 적용하는 방식</li>
+                <li>속성과 값은 콜론(:)으로 구분</li>
+                <li>속성과 속성은 세미콜론(;)으로 구분</li>
+            </ul><br>
+
+            <li>문서 내 지정형</li><br>
+            <div>
+                &lt;style type=&quot;text/css&quot;&gt;<br>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;스타일 내용</p>
+                &lt;/style&gt;
+            </div><br>
+            <ul>
+                <li>&lt;style&gt; 태그로 지정한 스타일이 현재 작업 문서 전체에 영향을 준다.</li>
+            </ul><br>
+
+            <li>외부 문서 삽입형</li>
+            <p>&lt;link rel=stylesheet href=&quot;외부 css파일 경로&quot; 
+                type=&quot;text/css&quot;&gt;</p>
+            <ul>
+                <li>&lt;link&gt; 태그로 외부에 있는 css 파일을 연결하여 여러 문서에 
+                    하나의 서식을 적용한다.</li>
+                <li>&lt;link&gt; 태그는 &lt;head&gt; 태그 사이에 입력한다.</li>
+            </ul>
+
+        </ul>
+        <hr class="end_line">
+
+        <h1>선택자</h1><hr class="title_line">
+        
+        스타일을 적용할 대상으로, { } 앞에 적어주는 것.<br><br>
+        <div>
+            &lt;style type=&quot;text/css&quot;&gt;<br>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;선택자{속성:값}</p>
+            &lt;/style&gt;
+        </div>
+
+        <ul>
+            <li>태그 선택자</li>
+            <p>태그{속성:값; 속성:값;}</p>
+            <li>클래스 선택자</li><br>
+            <div>
+                &lt;style type=&quot;text/css&quot;&gt;<br>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;.클래스명{속성:값;}</p>
+                &lt;/style&gt;
+            </div><br>
+            <div>
+                    &lt;body&gt;<br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;태그 class=클래스명&gt;</p>
+                    &lt;/body&gt;
+            </div><br>
+            
+            <ul>
+                <li>선택자를 사용할 때 클래스명 앞에 .을 붙인다.</li>
+                <li>반복적으로 사용하는 스타일을 지정할 때 사용된다.</li>
+                <li>어느 태그에나 사용할 수 있다.</li>
+            </ul><br>
+
+            <li>아이디 선택자</li><br>
+            <div>
+                    &lt;style type=&quot;text/css&quot;&gt;<br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;#아이디명{속성:값;}</p>
+                    &lt;/style&gt;
+            </div><br>
+            <div>
+                &lt;body&gt;<br>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;태그 id=아이디명&gt;</p>
+                &lt;/body&gt;
+            </div><br>
+            <ul>
+                <li>레이어를 동적으로 제어할 때 사용한다.</li>
+                <li>주로 div 태그와 함께 사용된다.</li>
+                <li>하나의 태그에만 적용된다.</li>
+            </ul><br>
+            
+            <li>복수 선택자</li>
+            <p>태그1, 태그2{속성:값; 속성:값;}</p>
+            <ul>
+                <li>여러 태그에 같은 스타일을 적용한다.</li>
+            </ul><br>
+
+            <li>자손 선택자</li>
+            <p>태그1 태그2{속성:값;}</p>
+            <ul>
+                <li>지정된 태그 안에 포함된 태그에만 스타일을 적용한다.</li>
+            </ul><br>
+
+            <li>가상 선택자</li>
+            <p>a:지정자{속성:값;}</p>
+            <ul>
+                <li>실제로 현재 html문서상에 존재하지 않는 형식을 지정할 때 사용한다.</li>
+                <li>주로 하이퍼링크 설정에 사용한다.</li>
+            </ul>
+        </ul><br>
+        <hr class="end_line">
     </body>
 </html>
