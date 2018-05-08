@@ -8,6 +8,49 @@
     </head>
 
     <body>
-        <h1>Javascript 기초</h1>
+        <h1>JavaScript 삽입</h1><hr class="title_line">
+
+        html문서 내에 &lt;script&gt; 태그를 사용하여 자바스크립트임을 명시한다.<br>
+        <ul>
+            <li>&lt;script&gt; 태그에 src와 language 속성 지정 가능</li>
+            <ul>
+                <li>src : 외부 자바스크립트 파일 url 명시</li>
+                <li>language : 스크립트의 종류를 명시(javascript)</li>
+            </ul><br>
+
+            <div>
+                    &lt;script language=&quot;javascript&quot;&gt;<br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;내용</p>
+                    &lt;/script&gt;
+            </div><br>
+
+            <li>자바스크립트는 html의 어느 부분에 삽입해도 상관 없다.</li>
+        </ul>
+        <hr class="end_line">
+
+        <h1>JavaScript 삽입 형태</h1><hr class="title_line">
+
+        <ul>
+            <li>내장형 : &lt;head&gt; 또는 &lt;body&gt; 태그에 삽입</li>
+            <li>라인 입력형 : html 태그에 이벤트 핸들러 삽입</li>
+            <p>&lt;태그 이벤트핸들러=&quot;자바스크립트 소스&quot;&gt;</p>
+
+            <li>함수형</li>
+            <div>
+                &lt;script language=&quot;javascript&quot;&gt;<br>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;function 함수명()</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;자바스크립트 소스</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                &lt;/script&gt;<br>
+
+                <p>&lt;태그 이벤트핸들러=&quot;함수명()&quot;&gt;</p>
+            </div><br>
+
+            <li>링크형</li>
+            <p>&lt;script language=javascript src=&quot;js 파일의 전체 경로&quot;&gt;&lt;/script&gt;</p>
+        </ul>
+
+        <hr class="end_line">
     </body>
 </html>
