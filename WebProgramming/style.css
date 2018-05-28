@@ -32,21 +32,13 @@ body{
     width: 100%;
 }
 
-#menuBar ul{
-    padding-left: 0;
-    margin: 0;
-}
-
-#menuBar ul li{
+#menuBar a{
     list-style-type: none;
     float: left;
     line-height: 50px;
     text-align: center;
-    border-left:1px solid white;
-}
-
-#menuBar ul li:first-child{
-    border-left: none;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
 }
 
 #menuBar .menuButton{
