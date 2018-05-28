@@ -24,16 +24,16 @@ body{
 }
 
 /* 상단 메뉴 바 */
-#menuBar{
+.menuBar{
     background-color: #424242;
     margin: 0;
     padding: 0;
     height: 50px;
     width: 100%;
+    float:left;
 }
 
-#menuBar a{
-    list-style-type: none;
+.menuBar a{
     float: left;
     line-height: 50px;
     text-align: center;
@@ -41,19 +41,55 @@ body{
     border-right: 1px solid black;
 }
 
-#menuBar .menuButton{
+.menuBar .menuButton{
+    cursor: pointer;
     text-decoration: none;
     color: white;
     font-size:20pt;
     font-family: "굴림";
     font-weight: bold;
-    display: block;
     width:200px;
 }
 
-#menuBar .menuButton:hover{
+.menuBar .menuButton:hover{
     color:black;
     background-color: #A4A4A4;
+}
+
+.refSites{
+    float: left;
+    overflow: hidden;
+}
+
+.dropDown{
+    display: none;
+    position: absolute;
+    top: 150px;
+    background-color: #848484;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropDown a{
+    float: none;
+    color: black;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.dropDown a:hover{
+    background-color: #6E6E6E;
+    color: white;
+}
+
+.show{
+    display:block;
+}
+
+.search{
+    float: right;
 }
 
 /* 좌측 하단 메뉴 */
