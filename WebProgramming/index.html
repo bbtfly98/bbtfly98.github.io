@@ -4,13 +4,76 @@
         <title> WebProgramming Study </title>
 
         <link rel=stylesheet href="style.css" type="text/css">
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+        <script>
+            var clicked = 0;
+            var seltdLoc = 'home';
+
+            $(document).ready(function () {
+                // 참고 사이트 드롭다운 부드럽게 나오기
+                $('.refSites > .menuButton').click(function () {
+                    $('#sites').slideToggle('normal');
+                });
+
+                // 좌측 하단 본문 여닫기
+                $('.menuBar > .menuButton').click(function () {
+                    $('#menu').toggle('normal');
+                    if ( clicked == 0 ) {
+                        $('#content').animate({
+                        width: '100%'
+                        });
+                        clicked = 1;
+                    }
+                    else {
+                        $('#content').animate({
+                            width: '80%'
+                        });
+                        clicked = 0;
+                    }
+                });
+
+                // 버튼 클릭시 seltdLoc 설정
+                $('#htmlBtn').click(function () {
+                    seltdLoc = 'html';
+                });
+                $('#cssBtn').click(function () {
+                    seltdLoc = 'css';
+                });
+                $('#jsBtn').click(function () {
+                    seltdLoc = 'javascript';
+                });
+                $('#jqueryBtn').click(function () {
+                    seltdLoc = 'jquery';
+                });
+                $('#title > a').click(function () {
+                    seltdLoc = 'home';
+                });
+
+                // 검색 버튼 동작
+                $('.search > .menuButton').click(function () {
+                    if ( seltdLoc == 'html' ) {
+                        window.open("https://www.google.co.kr/search?ei=eJkqW8eWFcT68gWpt5mICA&q=html&oq=html&gs_l=psy-ab.3..0i67k1l3j0i131k1j0l4j0i67k1j0.1928.3130.0.3280.6.6.0.0.0.0.138.560.3j2.6.0....0...1c.1j4.64.psy-ab..0.5.559.0..0i131i67k1j0i3k1.87.sqLSBsezONw");
+                    }
+                    else if ( seltdLoc == 'css' ) {
+                        window.open("https://www.google.co.kr/search?hl=ko&source=hp&ei=y5sqW97RLcGe8QWNuZewBw&q=css&oq=css&gs_l=psy-ab.3..0i131k1j0l9.681.893.0.1071.4.3.0.0.0.0.120.231.0j2.2.0....0...1c.1.64.psy-ab..2.2.231.0...0.JrGThXdnwIY");
+                    }
+                    else if ( seltdLoc == 'javascript' ) {
+                        window.open("https://www.google.co.kr/search?hl=ko&source=hp&ei=9psqW87jDMqB8wWJ3LqgBA&q=javascript&oq=javascript&gs_l=psy-ab.3..0i131k1j0l3j0i131k1j0l5.781.3257.0.3477.15.7.2.5.5.0.187.938.1j6.7.0....0...1c.1.64.psy-ab..1.14.995.0..0i10k1.0.cv_cmmCw6U8");
+                    }
+                    else if ( seltdLoc == 'jquery' ) {
+                        window.open("https://www.google.co.kr/search?hl=ko&source=hp&ei=MZwqW9LJEYGx8QWFzbGoDQ&q=jquery&oq=jquery&gs_l=psy-ab.3..0l4j0i131k1j0l5.1368.2205.0.2552.7.3.0.3.3.0.105.305.1j2.3.0....0...1c.1.64.psy-ab..1.6.321.0...0.cOQjKfh7PAg");
+                    }
+                });
+            });
+        </script>
     </head>
 
     <!-- 제목 영역 -->
     <body>
         <div id="title">
             <span style="vertical-align: 50%;">
-                <a href="https://bbtfly98.github.io/WebProgramming/index.html" target=_self>WebProgramming</a>
+                <a href="index.html" target=_self>WebProgramming</a>
             </span>
         </div>
 
@@ -28,7 +91,7 @@
             </div>
             
 
-            <div class="search"><a class="menuButton" onclick="search()">검색</a></div>
+            <div class="search"><a class="menuButton">검색</a></div>
         </nav>
 
         <script>
@@ -54,10 +117,10 @@
         <!-- 좌측 하단 메뉴 -->
         <div id="menu">
             <ul>
-                <li><a class="sideMenu" href="html_content.html" target="content">HTML</a></li>
-                <li><a class="sideMenu" href="css_content.html" target="content">CSS</a></li>
-                <li><a class="sideMenu" href="javascript_content.html" target="content">Javascript</a></li>
-                <li><a class="sideMenu" href="jquery_content.html" target="content">JQuery</a></li>
+                <li><a id="htmlBtn" class="sideMenu" href="html_content.html" target="content">HTML</a></li>
+                <li><a id="cssBtn" class="sideMenu" href="css_content.html" target="content">CSS</a></li>
+                <li><a id="jsBtn" class="sideMenu" href="javascript_content.html" target="content">Javascript</a></li>
+                <li><a id="jqueryBtn" class="sideMenu" href="jquery_content.html" target="content">JQuery</a></li>
             </ul>
         </div>
 

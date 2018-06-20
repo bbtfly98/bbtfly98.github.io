@@ -7,7 +7,35 @@
 
     </head>
 
-    <body style="font-size: 20pt;">
-        <p style="text-align: center;">아직 배우지 않았어요~</p>
+    <body>
+            <h1>jQuery 사용 설정</h1><hr class="title_line">
+            jQuery를 이용하는데 CDN방식(외부 참조 방식)을 이용했다.<br>
+
+            <xmp style="font-family: '나눔바른펜', '굴림'">
+                <!DOCTYPE html>
+                <html>
+                    <head>
+                        <title> jQuery Basic </title>
+                        <script src="jQuery경로명(ex : https://code.jquery.com/jquery-3.3.1.js)"></script>
+                        <script>
+                            $(document).ready(function() {
+                                // link event
+                                var src = $('script').attr('src');
+                
+                                alert(src);
+                            });
+                        </script>
+                    </head>
+                
+                    <body>
+                    </body>
+                
+                </html>
+            </xmp>
+            <hr class="end_line">
+
+            <h1>jQuery 라이브러리 형태</h1><hr class="title_line">
+            $(선택자).메소드(매개변수, 매개변수)
+            <hr class="end_line">
     </body>
 </html>
